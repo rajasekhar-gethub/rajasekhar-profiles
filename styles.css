@@ -1,0 +1,507 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+h2, p {
+    text-align: center;
+    margin-top: 50px;
+    color: #333;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    width: 96%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.header.scrolled {
+    background: linear-gradient(135deg, #ff6f61, #ff9068);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    position: fixed;
+    width: 97%;
+    top: 0;
+    z-index: 1000;
+    /* transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out; */
+
+}
+
+
+.logo img {
+    width: 88px !important;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ffde59;
+    transform: translateY(-5px); /* Hover Effect */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Content Placeholder */
+.content {
+    height: 150vh;
+    background-color: #fff;
+    padding: 50px;
+}
+/* Add a subtle animation to the header background */
+.header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    background-size: 200% 200%;
+    animation: bgAnimation 8s ease infinite;
+}
+
+@keyframes bgAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* Glowing Logo */
+.logo img {
+    width: 120px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6)); /* Adds a glow */
+}
+
+.navbar ul li a {
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Soft glowing effect */
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffde59;
+    text-shadow: 0 0 20px rgba(255, 223, 89, 0.8); /* Glow gets stronger on hover */
+    transform: translateY(-5px); /* Hover effect */
+}
+.navbar ul li a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffde59;
+    border-color: #ffde59; /* Adds a gradient border */
+    box-shadow: 0 0 15px rgba(255, 223, 89, 0.5); /* Glowing shadow */
+    transform: translateY(-5px);
+}
+.logo img {
+    width: 120px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1) rotate(5deg); /* Slight scale and rotation */
+}
+
+
+/* h */
+.header {
+    padding: 10px 40px;
+    transition: padding 0.3s ease;
+}
+
+.header.shrink {
+    padding: 10px 40px;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2b2b2b;
+    z-index: -1; /* Behind everything */
+}
+/* first-section  start*/
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Container for Content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero-section .container{
+    margin-top: 50%;
+
+}
+
+/* Text Content */
+.text-content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff9068;
+}
+
+/* Image Content */
+.image-content {
+    flex: 1;
+    text-align: right;
+}
+
+.profile-image {
+    width: 350px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+/* Background Animation */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -25%;
+    left: -25%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    transform: rotate(45deg);
+    animation: animateBackground 10s infinite linear;
+    z-index: 0;
+}
+
+@keyframes animateBackground {
+    0% {
+        transform: translate(0, 0) rotate(45deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+}
+
+/* Content to Appear Above Background */
+.hero-content {
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+/* Parallax Background */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    background-attachment: fixed; /* Parallax effect */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.05) 100%);
+    transform: rotate(45deg);
+    animation: backgroundAnimation 15s infinite linear;
+    z-index: 0;
+}
+
+@keyframes backgroundAnimation {
+    0% { transform: translate(0, 0) rotate(45deg); }
+    100% { transform: translate(-50%, -50%) rotate(45deg); }
+}
+
+/* Profile Image Hover Effect */
+.profile-image {
+    width: 350px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.profile-image:hover {
+    transform: scale(1.1); /* Image grows slightly on hover */
+    box-shadow: 0 12px 40px rgba(255, 223, 89, 0.8); /* Stronger shadow on hover */
+}
+p.first-para {
+    text-align: justify;
+    margin-bottom: 39px;
+}.my-image {
+    padding-top: 10px;
+}
+/* first-sectin-stop */
+
+/* second-sectino-start */
+/* General Section Styling */
+.skills-section {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    padding: 120px 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Header Styles */
+.skills-header h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #fdfdfd;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.skills-header p {
+    font-size: 1.4rem;
+    margin-bottom: 60px;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Flexbox Layout for Skills */
+.skills-content {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    gap: 40px; /* Spacing between items */
+    padding: 20px; /* Padding around the content */
+}
+
+/* Skill Item and Card Styling */
+.skill-item {
+    min-width: 300px; /* Minimum width for each card */
+    perspective: 1000px; /* Add perspective for 3D effect */
+}
+
+.skill-card {
+    width: 100%; /* Full width for responsiveness */
+    height: 350px;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d; /* Preserve 3D effect */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.skill-card:hover {
+    transform: rotateY(180deg); /* Flip effect on hover */
+}
+
+/* Front and Back Styles */
+.skill-front, .skill-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back when facing front */
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Back Style */
+.skill-back {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotateY(180deg); /* Hide back */
+}
+
+/* Icon and Title Styles */
+.skill-front i {
+    font-size: 4rem;
+    color: #f39c12;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.skill-front h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.skill-front p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Hover Effects */
+.skill-card:hover .skill-front i {
+    color: #e67e22; /* Change color on hover */
+}
+
+/* Back Content Style */
+.skill-back p {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* second-section-stop */
+
+/* third-section-start */
+/* Projects Section Styling */
+.projects-section {
+    padding: 100px 50px;
+    background: #f4f4f4;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+  }
+  
+  .projects-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .project-card {
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    transform: scale(0.95) translateY(100px); /* Slightly scaled down and translated below */
+    opacity: 0; /* Start invisible */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* For hover effect */
+  }
+  
+  .project-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+  }
+  
+  .project-card p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Hover effect */
+  .project-card:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  }
+  
+/* third-section-stop*/
